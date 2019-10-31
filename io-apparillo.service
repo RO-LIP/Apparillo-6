@@ -1,0 +1,9 @@
+[Unit]
+Description=Startet io script für aparillo.
+
+[Service]
+Type=simple
+ExecStart=/home/pi/io-apparillo6.py
+
+[Install]
+WantedBy=multi-user.target

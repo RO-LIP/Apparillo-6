@@ -1,0 +1,30 @@
+disable_splash=1
+disable_overscan=1
+hdmi_drive=2
+dtparam=i2c_arm=on
+dtparam=i2s=on
+dtparam=audio=off
+dtoverlay=justboom-dac
+#dtoverlay=pi3-disable-wifi
+#dtoverlay=pi3-disable-bt
+
+
+#### Eigene Einstellungen #####
+#dtoverlay=hifiberry-dacplus
+#dtoverlay=justboom-dac
+
+max_usb_current=1
+
+##5Inch Touch display mit 15:9 -- 16:9 sollte am Display eingestellt werden!##
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=87
+config_hdmi_boost=7
+hdmi_cvt 800 480 60 6
+display_hdmi_rotate=1
+
+##Touch eingabe wird in /etc/X11/xorg.conf.d/40-libinput.conf gedreht mit: Option "CalibrationMatrix" "0 1 0 -1 0 1 0 0 1"
+
+
+##pin fuer abschaltfunktion UVLO bzw zu halten der spannungsversorgung uvlo
+dtoverlay=gpio-poweroff,gpiopin=9,active_low
